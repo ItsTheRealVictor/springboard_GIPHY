@@ -19,8 +19,8 @@ $('#search').on('submit', async function(evt){
     
         
         function addGif() {
-        const gifURL = response.data.data[0].url
-        $('.gifHolder').append(`<img src='${gifURL}' class='test'/>`)
+            const gifURL = response.data.data[5].images.original.url
+            $('.gifHolder').append($('<img/>', {id:'sup', src:gifURL}))
     }
 
     
