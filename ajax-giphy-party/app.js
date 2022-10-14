@@ -3,8 +3,6 @@ const $searchTerm = $('.searchText')
 $('#search').on('submit', async function(evt){
     evt.preventDefault()
     
-
-        evt.preventDefault();
       
         let term = $searchTerm.val();
       
@@ -15,7 +13,16 @@ $('#search').on('submit', async function(evt){
           }
         });
         for (let dataPoint of response.data.data){
-            console.log(dataPoint.title)
+            console.log(dataPoint)
         };
+        addGif()
+    
+        
+        function addGif() {
+        const gifURL = response.data.data[0].url
+        $('.gifHolder').append(`<img src='${gifURL}' class='test'/>`)
+    }
+
+    
       });
 
