@@ -1,8 +1,21 @@
 body{
-    background-color:steelblue
+    background-color:steelblue;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.bigDiv {
+    display: flex;
+    justify-content:center;
+}
+
+h1 {
+    text-align: center;
+}
+
+b
 
 .gifHolder{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
